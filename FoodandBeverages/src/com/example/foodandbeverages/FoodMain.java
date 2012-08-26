@@ -3,12 +3,18 @@ package com.example.foodandbeverages;
 import java.util.List;
 import java.util.Random;
 
+
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class FoodMain extends ListActivity {
 	private FoodCourtsDataSource datasource;
@@ -83,4 +89,16 @@ public class FoodMain extends ListActivity {
         getMenuInflater().inflate(R.menu.activity_food_main, menu);
         return true;
     }
+
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		
+		Intent  foodItemIntent = new Intent(this,FoodItemsActivity.class);
+	    foodItemIntent.putExtra("FoodCourt", ((TextView)v).getText());
+		startActivity(foodItemIntent);
+		//Toast.makeText(this, ((TextView)v).getText()+" position:"+position, Toast.LENGTH_LONG).show();
+		
+		
+	}
+    
 }
