@@ -44,6 +44,22 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 	  private static final String INSERET_INFOODITEMS2="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('VegeSub','Subway','2.99')";
 	  private static final String INSERET_INFOODITEMS3="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('BaconSub','Subway','1.99')";
 	  
+	  private static final String INSERET_INFOODITEMS4="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('ChickenSub','Steak Escape','5.99')";
+	  private static final String INSERET_INFOODITEMS5="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Chicken Salad','Steak Escape','5.99')";
+	  private static final String INSERET_INFOODITEMS6="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Veg Sandwich','Steak Escape','5.99')";
+	  
+	  private static final String INSERET_INFOODITEMS7="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('ChickenSandwich','Wendys','5.99')";
+	  private static final String INSERET_INFOODITEMS8="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Chickenwrap','Wendys','5.99')";
+	  private static final String INSERET_INFOODITEMS9="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Chicken salad',' Wendys','5.99')";
+	  
+	  private static final String INSERET_INFOODITEMS10="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Vanila Latte','Starbucks','5.99')";
+	  private static final String INSERET_INFOODITEMS11="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Mocha ','Starbucks','5.99')";
+	  private static final String INSERET_INFOODITEMS12="INSERT INTO FoodItems (foodname, foodcourt, price) " +"VALUES ('Tea',' Starbucks','2.99')";
+	  
+	  
+	  
+	  
+	  
 	  @Override
 	  public void onCreate(SQLiteDatabase database) {
 	    database.execSQL(DATABASE_CREATE);
@@ -51,6 +67,19 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 	    database.execSQL(INSERET_INFOODITEMS1);
 	    database.execSQL(INSERET_INFOODITEMS2);
 	    database.execSQL(INSERET_INFOODITEMS3);
+	    
+	    database.execSQL(INSERET_INFOODITEMS4);
+	    database.execSQL(INSERET_INFOODITEMS5);
+	    database.execSQL(INSERET_INFOODITEMS6);
+	    
+	    database.execSQL(INSERET_INFOODITEMS7);
+	    database.execSQL(INSERET_INFOODITEMS8);
+	    database.execSQL(INSERET_INFOODITEMS9);
+	    
+	    database.execSQL(INSERET_INFOODITEMS10);
+	    database.execSQL(INSERET_INFOODITEMS11);
+	    database.execSQL(INSERET_INFOODITEMS12);
+	    
 	    
 	    
 	  }
